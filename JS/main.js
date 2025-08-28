@@ -21,9 +21,9 @@ for(const copyBtn of copyBtns){
    
         
      const copyText =  copyBtn.parentNode.parentNode.childNodes[7].innerText;
-        console.log(copyText)
+      
 
-    // navigaor.clipboard.writeText(copyText);
+    navigaor.clipboard.writeText(copyText);
     
 
     })
@@ -80,9 +80,14 @@ for(const callBtn of callBtns){
         `
         callHistory.append(newCallHistory);
 
-
+        const clearBtn = document.getElementById('clear-btn').addEventListener('click', function(){
+            newCallHistory.innerHTML = '';
+        })
         
     })} 
+
+    
+
     
 
         
