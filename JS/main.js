@@ -16,10 +16,17 @@ for(const copyBtn of copyBtns){
     const totalCopyCount = copyCount + 1;
     document.getElementById('copy-count').innerText = totalCopyCount;
 
+
+
+
+
+
     // copy feature        
      let copyText =  copyBtn.parentNode.parentNode.childNodes[7].innerText;
-     console.log(copyText)
     window.navigator.clipboard.writeText(copyText);
+    alert('Number Copied!')
+
+
     
 
     })
