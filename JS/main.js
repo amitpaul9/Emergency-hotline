@@ -7,3 +7,40 @@ for(const heart of heartIcon){
     document.getElementById('heart-count').innerText = totalHeartCount;
     })
 }
+
+//Copy button feature
+const copyBtns = document.getElementsByClassName('copy-btn');
+for(const copyBtn of copyBtns){
+    copyBtn.addEventListener('click', function(){
+    const copyCount  = parseInt(document.getElementById('copy-count').innerText);
+    const totalCopyCount = copyCount + 1;
+    document.getElementById('copy-count').innerText = totalCopyCount;
+    })
+}
+
+
+// call button feature
+const callBtns = document.getElementsByClassName('call-btn');
+
+for(const callBtn of callBtns){
+    callBtn.addEventListener('click', function(){
+
+        // alert feature
+        const serviceTitle = callBtn.parentNode.parentNode.childNodes[3].innerText;
+        const serviceNumber = callBtn.parentNode.parentNode.childNodes[7].innerText;
+       alert(`📞Calling ${serviceTitle} ${serviceNumber}`)
+
+    
+        // coin reduce feature
+        const coins = parseInt(document.getElementById('coins').innerText);
+        const coinsCount = coins - 20;
+        document.getElementById('coins').innerText = coinsCount;
+
+
+
+
+        
+        
+    })} 
+    
+
