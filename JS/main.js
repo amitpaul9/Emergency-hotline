@@ -43,13 +43,23 @@ for(const callBtn of callBtns){
         // alert feature
         const serviceTitle = callBtn.parentNode.parentNode.childNodes[3].innerText;
         const serviceNumber = callBtn.parentNode.parentNode.childNodes[7].innerText;
-       alert(`📞Calling ${serviceTitle} ${serviceNumber}`)
+       
 
-    
+
         // coin reduce feature
         const coins = parseInt(document.getElementById('coins').innerText);
+
         const coinsCount = coins - 20;
+         if(coins < 20){
+            alert('Not enough coin')
+            return;
+        }
+
+        else{
         document.getElementById('coins').innerText = coinsCount;
+        alert(`📞Calling ${serviceTitle} ${serviceNumber}`)
+        }
+
 
 
         // call history add feature
