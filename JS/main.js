@@ -24,7 +24,7 @@ for(const copyBtn of copyBtns){
     // copy feature        
      let copyText =  copyBtn.parentNode.parentNode.childNodes[7].innerText;
     window.navigator.clipboard.writeText(copyText);
-    alert('Number Copied!')
+    alert('📑Copied')
 
 
     
