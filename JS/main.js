@@ -15,7 +15,22 @@ for(const copyBtn of copyBtns){
     const copyCount  = parseInt(document.getElementById('copy-count').innerText);
     const totalCopyCount = copyCount + 1;
     document.getElementById('copy-count').innerText = totalCopyCount;
+
+
+
+   
+        
+     const copyText =  copyBtn.parentNode.parentNode.childNodes[7].innerText;
+        console.log(copyText)
+
+    // navigaor.clipboard.writeText(copyText);
+    
+
     })
+
+
+
+
 }
 
 
@@ -49,8 +64,8 @@ for(const callBtn of callBtns){
         let minutes = now.getMinutes();
         let seconds = now.getSeconds();
         let ampm = hours >= 12 ? 'PM' : 'AM';
-        hours = hours % 12;
-
+        
+        hours = hours % 12 || 12;
 
 
 
@@ -60,10 +75,10 @@ for(const callBtn of callBtns){
         <h1 class="text-[15px] font-semibold ">${serviceTitle}</h1>
         <p class="text-[#5C5C5C] text-[14px]">${serviceNumber}</p>
     </div>
-    <p>${`${hours}:${minutes}:${seconds} ${ampm}`}</p>
+    <p text-[12px]>${`${hours}:${minutes}:${seconds} ${ampm}`}</p>
     </div>
         `
-        callHistory.append(newCallHistory)
+        callHistory.append(newCallHistory);
 
 
         
