@@ -37,10 +37,27 @@ for(const callBtn of callBtns){
         document.getElementById('coins').innerText = coinsCount;
 
 
-
-
+        // call history add feature
+        const callHistory = document.getElementById('call-history');
+        const newCallHistory = document.createElement('div');
         
+        // Time feature
+        
+
+       newCallHistory.innerHTML = `
+         <div class="flex justify-between p-4 bg-[#FAFAFA] rounded-[8px] mx-4 mb-2">
+    <div >
+        <h1 class="text-[18px] font-semibold ">${serviceTitle}</h1>
+        <p class="text-[#5C5C5C] text-[14px]">${serviceNumber}</p>
+    </div>
+    <p>Timne</p>
+    </div>
+        `
+        callHistory.append(newCallHistory)
+
+
         
     })} 
     
 
+        
